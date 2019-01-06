@@ -59,7 +59,20 @@ const styles = StyleSheet.create({
      flexDirection: 'row', 
      alignSelf: 'flex-start'
    }
-});
+})
 ```
 
 https://stackoverflow.com/a/49263706/2687479
+
+## Vertical Align child
+
+```
+const styles = StyleSheet.create({
+   container: {
+      justifyContent: 'center',
+   }
+})
+
+```
+
+https://stackoverflow.com/a/44338089/2687479
