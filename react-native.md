@@ -50,3 +50,16 @@ sudo chown username -R /dev/kvm
 Use `contain` or `cover` to stretch Image component to full width.
 
 https://github.com/facebook/react-native/issues/950#issuecomment-315845328
+
+## display: inline/inline-block equivalent
+
+```
+const styles = StyleSheet.create({
+   item: {
+     flexDirection: 'row', 
+     alignSelf: 'flex-start'
+   }
+});
+```
+
+https://stackoverflow.com/a/49263706/2687479
