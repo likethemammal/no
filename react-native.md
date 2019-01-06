@@ -23,3 +23,30 @@ If you run into the KVM permission issue for /dev/kvm run the command from [this
 ```
 sudo chown username -R /dev/kvm
 ```
+
+# Styling:
+
+## Full Width Image
+
+```
+<View 
+  style={{
+    flex:1,
+    flexDirection: 'row'
+  }}
+>
+  <Image
+    resizeMode='contain'
+    style={{
+      flex:1,
+      width:null,
+      height:null
+    }}
+    source={...}
+  />
+</View>
+```
+
+Use `contain` or `cover` to stretch Image component to full width.
+
+https://github.com/facebook/react-native/issues/950#issuecomment-315845328
