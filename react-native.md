@@ -32,6 +32,16 @@ sudo chown username -R /dev/kvm; emulator -avd $(emulator -list-avds)
 
 ## react-native run-android issues
 
+### Cant locate tools.jar
+
+Set your JAVA_HOME in the PATH to where java should be.
+
+```
+
+```
+
+More specifics in answer:
+https://stackoverflow.com/a/47263391/2687479
 
 ### gradle download issue (bintray / maven issue)
 
