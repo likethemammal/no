@@ -24,6 +24,12 @@ If you run into the KVM permission issue for /dev/kvm run the command from [this
 sudo chown username -R /dev/kvm
 ```
 
+##### Complete command with emulator startup:
+
+```
+sudo chown username -R /dev/kvm; emulator -avd $(emulator -list-avds)
+```
+
 # Styling:
 
 ## Full Width Image
