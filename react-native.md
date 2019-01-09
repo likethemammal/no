@@ -30,6 +30,42 @@ sudo chown username -R /dev/kvm
 sudo chown username -R /dev/kvm; emulator -avd $(emulator -list-avds)
 ```
 
+## react-native run-android issues
+
+### gradle download issue
+
+```
+...
+Downloading https://services.gradle.org/distributions/gradle-3.3-bin.zip     
+
+Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+        at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)                                                                             
+        at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)                                                                        
+...
+```
+
+If you get this issue, follow the answers in this thread:
+
+https://github.com/mesosphere/hdfs-deprecated/issues/141
+
+Basically by removing the `s` from `https` in the `distributionUrl` value in gradle/wrapper/gradle-wrapper.properties.
+
+### Could not determine java version from x.x.x
+
+```
+Building and installing the app on the device (cd android && ./gradlew installDebug)...
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine java version from '10.0.1'.
+...
+```
+
+Follow this answer in stackoverflow by updating the `distributionUrl` to an updated version of gradle: https://stackoverflow.com/a/46867575/2687479
+
+Make sure to keep it `http` not `https` if the previous SSL issue occured.
+
 # Styling:
 
 ## Full Width Image
