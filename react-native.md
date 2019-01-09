@@ -32,6 +32,28 @@ sudo chown username -R /dev/kvm; emulator -avd $(emulator -list-avds)
 
 ## react-native run-android issues
 
+
+### gradle download issue (bintray / maven issue)
+
+Add `google()` and new maven url to `android/build.gradle`
+
+```
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        maven {   url "https://maven.google.com"  }
+     }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+```
+
 ### gradle download issue
 
 ```
