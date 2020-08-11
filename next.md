@@ -5,6 +5,7 @@
 #### Docs
 
 - [`getStaticProps`][docs_getStaticProps]
+- [`styled-components` + Next.js][docs_styled-components]
 
 #### Articles
 
@@ -40,6 +41,7 @@ https://github.com/vercel/next.js/issues/7755
 
 
 [docs_getStaticProps]: https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
+[docs_styled-components]: https://styled-components.com/docs/advanced#nextjs
 [article_imageOptimization]: https://codeconqueror.com/blog/image-optimization-with-next-js
 
 [lib_next_optimized_images]: https://github.com/cyrilwanner/next-optimized-images
